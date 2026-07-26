@@ -5,8 +5,8 @@ import pandas as pd
 import requests
 
 # Base URL of the Flask backend
-# This should point to the service name 'backend' and the exposed port (5000) within the Docker network
-BACKEND_URL = os.getenv("BACKEND_URL", "http://backend:5000").rstrip('/')
+# This should point to the service name 'backend' and the exposed port (7860) within the Docker network
+BACKEND_URL = os.getenv("BACKEND_URL", "http://backend:7860").rstrip('/')
 
 # Set the title of the Streamlit app
 st.title("Superkart Sales Prediction")
