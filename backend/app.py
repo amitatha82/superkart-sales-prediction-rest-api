@@ -19,6 +19,16 @@ except Exception as e:
     print(f"Error loading model: {e}")
     model = None # Handle case where model loading fails
 
+# Define a route for the home page (GET request)
+@superkart_prediction_api.get('/')
+def home():
+    """
+    This function handles GET requests to the root URL ('/') of the API.
+    It returns a simple welcome message.
+    """
+    return "Welcome to the Superkart Price Prediction API!"
+
+
 # Define an endpoint for single prediction (POST request)
 @superkart_prediction_api.post('/v1/predict')
 def predict_sales():
